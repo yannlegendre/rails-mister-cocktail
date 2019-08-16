@@ -1,6 +1,14 @@
 .navbar-lewagon {
   justify-content: space-between;
   background-color: #F4F4F4;
+
+  h2:hover {
+    font-weight: bold;
+  }
+
+  h2 {
+    font-size: 14px;
+  }
 }
 
 .navbar-lewagon .navbar-collapse {

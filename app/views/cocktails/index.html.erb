@@ -11,7 +11,7 @@
     <% @cocktails.each do |cocktail| %>
       <div class="col-4">
         <%= link_to cocktail_path(cocktail), :action => 'go' do %>
-          <div class="card-custom" style="background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+          <div class="card-custom" style="background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.5)),
          url('<%= cl_image_path cocktail.photo %>'); background-position: 0em, 0em">
             <h3><%= cocktail.name.capitalize%></h3>
           </div>
