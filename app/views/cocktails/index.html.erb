@@ -1,14 +1,26 @@
-<h1>My cocktails</h1>
 
-<%= link_to 'Create a new cocktail',  new_cocktail_path %>
+<div class="banner">
+  <h1>Best cocktails</h1>
+</div>
+
+<div class="container">
+
+  <h2>Choose your cocktail</h2>
+  <div class="row">
+    <% @cocktails.each do |cocktail| %>
+      <div class="col-4">
 
 
-<ul>
-  <% @cocktails.each do |cocktail| %>
-    <li>
-      <h2><%= cocktail.name%></h2>
-      <%= link_to 'Show more', cocktail_path(cocktail) %>
+        <%= link_to cocktail_path(cocktail), :action => 'go' do %>
+          <div class="card-custom">
+            <h3><%= cocktail.name%></h3>
+          </div>
+        <% end %>
 
-    </li>
-  <% end %>
-</ul>
+
+      </div>
+    <% end %>
+  </div>
+</div>
+
+

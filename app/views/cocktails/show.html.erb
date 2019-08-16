@@ -1,18 +1,31 @@
-<h1><%= @cocktail.name %></h1>
+<div class="custom-banner"  style="background-color: linear-gradient(180deg,rgba(0,0,0,.2),rgba(0,0,0, 0.8)); background-image:url('https://images.unsplash.com/photo-1547495706-7485ef02d47d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60')">
+  <h1><%= @cocktail.name %></h1>
 
-<ul>
-  <% @cocktail.doses.each do | dose |%>
-    <li><%= "#{dose.description} de #{dose.ingredient.name}" %>
-      <%= link_to 'X', dose_path(dose),
-      method: :delete,
-      data: { confirm: "Are you sure?" } %>
-    </li>
-  <% end %>
-</ul>
+</div>
 
-<p>
-<%= link_to 'Add dose', new_cocktail_dose_path(@cocktail) %>
+<div class="container">
+  <h2>Ingrédients</h2>
+  <ul>
+    <% @cocktail.doses.each do | dose |%>
+    <div class="ing-list">
+      <p>
+        <div class="text">
+          <%= "#{dose.description} de #{dose.ingredient.name}"%>
+          <%=link_to dose_path(dose), method: :delete,data: { confirm: "Are you sure?" }, action: 'go' do %>
+          <% end %>
+        </div>
+        <i class="far fa-trash-alt"></i>
+      </p>
+    </div>
+    <% end %>
+  </ul>
 
-</p>
 
-<%= link_to 'Back to list', cocktails_path %>
+  <%= link_to 'Add ingredient', new_cocktail_dose_path(@cocktail), class: 'bouton_custom' %>
+
+</div>
+
+
+
+
+

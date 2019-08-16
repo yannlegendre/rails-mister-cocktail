@@ -1,3 +1,28 @@
 // Place all the styles related to the cocktails controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+h2 {
+  margin: 20px 0;
+}
+
+
+.ing-list {
+  display: flex;
+  justify-content: space-between;
+  width: 300px;
+  margin: 20px 0;
+
+  p {
+    font-size: 26 px;
+  }
+
+  .text {
+    flex-grow: 1;
+  }
+}
+
+ul {
+  margin-bottom: 40px;
+}
+

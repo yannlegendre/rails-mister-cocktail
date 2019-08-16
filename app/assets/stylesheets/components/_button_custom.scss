@@ -1,0 +1,12 @@
+.bouton_custom {
+  color: white;
+  padding: 16px 38px;
+  border-radius: 10px;
+  font-size: 20px;
+  background: linear-gradient(#c78167, #6d4b39);
+  transition: background 1s ease;
+  &:hover{
+    background: linear-gradient( #6d4b39, #c78167);
+    color: white;
+  }
+}

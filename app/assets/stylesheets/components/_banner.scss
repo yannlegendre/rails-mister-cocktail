@@ -1,0 +1,25 @@
+.banner {
+  background: linear-gradient(180deg,rgba(0,0,0,.2),rgba(0,0,0, 0.8)), asset-url('banner.jpg');
+  background-size: cover;
+  background-position: center;
+  color: #eee;
+  text-align: center;
+  padding: 20vh;
+  margin-bottom: 20px;
+  h1 {
+    font-size: 60px;
+  }
+}
+
+
+.custom-banner {
+  background-size: cover;
+  background-position: center;
+  color: #eee;
+  text-align: center;
+  padding: 20vh;
+  margin-bottom: 20px;
+  h1 {
+    font-size: 60px;
+  }
+}
