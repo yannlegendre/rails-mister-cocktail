@@ -5,4 +5,7 @@ class Cocktail < ApplicationRecord
   validates :name, uniqueness: true, presence: true
   # before_destroy :check_for_ingredient
 
+  mount_uploader :photo, PhotoUploader
+  validates :photo, presence: true
+
 end

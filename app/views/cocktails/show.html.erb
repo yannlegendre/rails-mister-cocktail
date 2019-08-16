@@ -1,4 +1,5 @@
-<div class="custom-banner"  style="background-color: linear-gradient(180deg,rgba(0,0,0,.2),rgba(0,0,0, 0.8)); background-image:url('https://images.unsplash.com/photo-1547495706-7485ef02d47d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60')">
+<div class="banner"  style="background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+         url('<%= cl_image_path @cocktail.photo, height: 300, width: 400, crop: :fill %>')">
   <h1><%= @cocktail.name %></h1>
 
 </div>

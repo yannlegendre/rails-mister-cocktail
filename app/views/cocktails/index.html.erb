@@ -1,18 +1,20 @@
 
-<div class="banner">
-  <h1>Best cocktails</h1>
+<div class="home-banner banner">
+  <h1>Smooth cocktails for gentlemen</h1>
 </div>
 
 <div class="container">
 
   <h2>Choose your cocktail</h2>
+  <hr>
   <div class="row">
     <% @cocktails.each do |cocktail| %>
       <div class="col-4">
 
 
         <%= link_to cocktail_path(cocktail), :action => 'go' do %>
-          <div class="card-custom">
+          <div class="card-custom" style="background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+         url('<%= cl_image_path cocktail.photo %>')">
             <h3><%= cocktail.name%></h3>
           </div>
         <% end %>

@@ -17,7 +17,16 @@ page = open(url).read
 content = JSON.parse(page)
 ingredients = content["drinks"]
 
-ingredients.each do |ingredient|
-  Ingredient.create(name: ingredient["strIngredient1"])
+# p ingredients.values.sort
+
+array = ingredients.map do |hash|
+  hash["strIngredient1"]
+end.sort
+
+array.each do |ingredient|
+  Ingredient.create(name: ingredient)
 end
+
+
+
 
