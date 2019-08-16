@@ -5,28 +5,41 @@
 </div>
 
 <div class="container">
+
   <h2>Ingrédients</h2>
-  <ul>
-    <% @cocktail.doses.each do | dose |%>
-    <div class="ing-list">
-      <p>
-        <div class="text">
-          <%= "#{dose.description} de #{dose.ingredient.name}"%>
-        </div>
-          <%=link_to dose_path(dose), method: :delete,data: { confirm: "Are you sure?" }, action: 'go' do %>
-          <i class="far fa-trash-alt"></i>
-          <% end %>
-      </p>
-    </div>
+
+  <div class="row">
+    <% @cocktail.doses.each do |dose| %>
+      <div class="col-3">
+       <div class="ing">
+         <div class="text">
+           <%= "#{dose.ingredient.name}  -   #{dose.description}"%>
+         </div>
+
+           <%=link_to dose_path(dose), method: :delete,data: { confirm: "Are you sure?" }, action: 'go' do %>
+           <i class="far fa-trash-alt"></i>
+           <% end %>
+       </div>
+
+      </div>
     <% end %>
-  </ul>
+  </div>
 
+<h2>Add dose</h2>
 
-  <%= link_to 'Add ingredient', new_cocktail_dose_path(@cocktail), class: 'bouton_custom' %>
+<div class="new-dose-container">
+  <%= simple_form_for [@cocktail, @dose] do |f| %>
+    <%= f.input :description, label: 'Quantité'%>
+    <%= f.association :ingredient, as: :select %>
 
+    <%= f.submit class: "btn btn-primary" %>
+  <% end %>
 </div>
 
 
+</div>
+
+<br>
 
 
 

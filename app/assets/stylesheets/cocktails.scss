@@ -3,28 +3,17 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 h2 {
-  font-size: 20px;
+  font-size: 24px;
+  font-family: 'News Cycle', sans-serif;
+  font-weight: 350;
   margin: 20px 0 10px 0;
   color: #222
 }
 
 
-.ing-list {
-  display: flex;
-  justify-content: space-between;
-  width: 300px;
-  margin: 20px 0;
-
-  p {
-    font-size: 26 px;
-  }
-
-  .text {
-    flex-grow: 1;
-  }
-}
 
 ul {
   margin-bottom: 40px;
 }
+
 

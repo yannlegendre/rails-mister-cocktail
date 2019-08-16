@@ -6,18 +6,17 @@
   padding: 14px;
   margin: 14px 0;
   height: 180px;
-  background-color: #eee;
   text-align: center;
   box-shadow: 1px 1px 1px rgba(0,0,0, 0.4);
   background-size: cover;
-
+  background-position: 0em, 0em;
   h3 {
     color: #fff;
     font-size: 20px;
   }
 
   &:hover {
-    background-color: #ddd;
+    background-position: 13em, 0em;
   }
 }
 
