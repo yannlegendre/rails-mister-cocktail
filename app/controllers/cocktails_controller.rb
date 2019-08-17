@@ -19,7 +19,8 @@ class CocktailsController < ApplicationController
     if @cocktail.save
       redirect_to cocktail_path(@cocktail)
     else
-      render :new
+      @cocktails = Cocktail.all
+      render :index, anchor: 'form'
     end
   end
 

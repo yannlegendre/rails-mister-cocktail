@@ -16,5 +16,13 @@
 // const imagePath = (name) => images(name, true)
 import 'bootstrap';
 
+// document.querySelectorAll('.card-custom').forEach((card) => {
+//   card.addEventListener('mouseover', (e) => {
+//     const urlImg = e.currentTarget.style.backgroundImage.split('url')[1];
+//     const val = "url"+urlImg;
+//     console.log(val);
+//     e.currentTarget.style.backgroundImage = val;
+//     console.log('toto' + e.target.style.backgroundImage)
+//   })
+// })
 
-console.log('Hello World from Webpacker')

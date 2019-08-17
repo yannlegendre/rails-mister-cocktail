@@ -12,7 +12,7 @@
       <div class="col-4">
         <%= link_to cocktail_path(cocktail), :action => 'go' do %>
           <div class="card-custom" style="background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.5)),
-         url('<%= cl_image_path cocktail.photo %>'); background-position: 0em, 0em">
+         url('<%= cl_image_path cocktail.photo %>')">
             <h3><%= cocktail.name.capitalize%></h3>
           </div>
         <% end %>
@@ -28,7 +28,7 @@
   <br>
     <div class="new-dose-container">
 
-        <%= simple_form_for @cocktail do |f| %>
+        <%= simple_form_for @cocktail, anchor:'form' do |f| %>
           <%= f.input :name, label: "Cocktail name" %>
           <%= f.input :photo %>
           <%= f.input :photo_cache, as: :hidden %>

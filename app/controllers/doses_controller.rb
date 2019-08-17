@@ -11,7 +11,8 @@ class DosesController < ApplicationController
     if @dose.save
       redirect_to cocktail_path(@cocktail)
     else
-      render :new
+      # render plain: 'nope'
+      render 'cocktails/show'
     end
   end
 
