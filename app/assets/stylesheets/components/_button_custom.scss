@@ -3,10 +3,12 @@
   padding: 8px 14px;
   border-radius: 10px;
   font-size: 14px;
-  background: linear-gradient(#c78167, #6d4b39);
-  transition: background 1s ease;
+  background: rgba(16, 6, 6, 0.5);
+  box-shadow: 0 0 2px 1px rgba(0,0,0, 0.4);
+  transition: background .3s ease;
   &:hover{
-    background: linear-gradient( #6d4b39, #c78167);
+    background: rgba(5, 0, 0, 0.8);
     color: white;
   }
 }
+

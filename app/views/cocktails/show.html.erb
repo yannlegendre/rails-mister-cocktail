@@ -27,7 +27,7 @@
 
 <h2>Add dose</h2>
 
-<div class="new-dose-container">
+<div class="form-container">
   <%= simple_form_for [@cocktail, @dose], anchor:'form' do |f| %>
     <%= f.input :description, label: 'Quantité'%>
     <%= f.association :ingredient, as: :select %>
